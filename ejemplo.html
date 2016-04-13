@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+      /*$(document).ready(function(){
+        var locations = ["http://yahoo.com", "http://google.com"];
+        var len = locations.length;
+        var iframe = $('#frame');
+        var i = 0;
+        setInterval(function () {
+            //iframe.attr('src', locations[++i % len]);
+            iframe.attr('src',locations[++i % len]);
+            return false;
+        }, 5000);
+      });*/
+
+      $(document).ready(function(){
+
+          var initial = 'http://www.platanitos.com';
+          $("#someFrame").attr("src", initial);
+
+          var locations = ["http://www.bing.com", "http://www.gmail.com", "http://www.platanitos.com"];
+          var len = locations.length;
+
+          var i = 0;
+
+          setInterval(function () {
+              //iframe.attr('src', locations[++i % len]);
+              $("#someFrame").attr("src", locations[++i % len]);
+          }, 15000);
+      });
+
+    </script>
+
+    <style>
+
+    body, iframe {
+      padding: 0px !important;
+      margin: 0px !important;
+    }
+
+    iframe {
+      width: 1360px;
+      height: 740px;
+      border: none !important;
+      overflow: hidden !important;
+    }
+
+    </style>
+
+  </head>
+  <body>
+    <!--<p><a href="http://www.youtube.com/embed/Q5im0Ssyyus" target="someFrame">Charlie 1</a></p>
+<p><a href="http://www.youtube.com/embed/QFCSXr6qnv4" target="someFrame">Charlie 2</a></p>
+<p><a href="http://www.youtube.com/embed/eaCCkfjPm0o" target="someFrame">Charlie 3</a></p>*/ -->
+
+<iframe name="someFrame" id="someFrame"></iframe>
+  </body>
+</html>
